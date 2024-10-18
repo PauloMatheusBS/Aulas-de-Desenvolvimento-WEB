@@ -16,31 +16,66 @@
         </fieldset>
 
         <fieldset > <legend>Contato</legend>
-            <label for="cont">Telefone de Contato </label><br>
-            <input type="text" id="cont" name="contato" placeholder="Telefone" maxlength="20" size="10" required><br>
+        <label for="cont">Telefone de Contato </label><br>
+        <input type="text" id="cont" name="contato" placeholder="Telefone" maxlength="20" size="10" required><br>
+        <label for="end">Endereço </label><br>
+        <input type="text" id="end" name="end" placeholder="Endereço" maxlength="20" size="10"><br>
+        </fieldset>
+       
+        <p>Qual sua Linguagem Favorita</p>
+        <input type="radio" id="html" name="fav_language" value="HTML" checked>
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JAVASCRIPT">
+        <label for="javascript">JAVASCRIPT</label><br><br><br>
     
-            <label for="end">Endereço </label><br>
-            <input type="text" id="end" name="end" placeholder="Endereço" maxlength="20" size="10"><br>
-            </fieldset>
+        <input type="checkbox" id="html" name="fav_language" value="HTML" checked>
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="javascript" name="fav_language" value="JAVASCRIPT">
+        <label for="javascript">JAVASCRIPT</label><br> <br>  <br> 
+
+        <fieldset id="email">
+        <legend>E-Mail</legend>
+        <p>email<input type="email" name="email" id="email" size="20" maxlength="30" placeholder="exemplo@exemplo.com"></p>
+        </fieldset> <br><br><br>
+
+        <fieldset id="senha">
+        <legend>Senha </legend>
+        <p>senha <input type="password" name="Senha" id="campos" size="20" maxlength="10" placeholder="abc@123"> </p>
+        </fieldset> <br> <br>
+
+
+        <fieldset id="data">
+        <legend>Data de Nascimento </legend>
+        <p>data nascimento <input type="date" name="date" id="campos=d" size="20" maxlength="10" placeholder="00-00-0000"></p>
+        </fieldset> <br> <br>
+
+        <fieldset> <legend>Horas</legend>
+        <label for="hora">Horario de Atendimento</label>
+        <input type="time" id="hora" name="hora"> <br> <br>
+        </fieldset> <br> <br>
+
+        <fieldset> <legend>DateTipe</legend>
+        <label for="datahora">Data e Hora</label>
+        <input type="datetime-local" id="datahora" name="datahora"> <br> <br>
+        </fieldset> <br> <br>
+
+        <fieldset> <legend>Idade</legend>
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" name="idade" min="0" max="120">  
+        </fieldset><br> <br>
+
+
         <button type="submit">Clique aqui</button>
         <input type="submit" value="Enviar">
         <button type="reset">Limpar Formulario</button>
+
+
+        
+
     </form>
-
-    <p>Qual sua Linguagem Favorita</p>
-    <input type="radio" id="html" name="fav_language" value="HTML" checked>
-    <label for="html">HTML</label><br>
-    <input type="radio" id="css" name="fav_language" value="CSS">
-    <label for="css">CSS</label><br>
-    <input type="radio" id="javascript" name="fav_language" value="JAVASCRIPT">
-    <label for="javascript">JAVASCRIPT</label><br><br><br>
-
-    <input type="checkbox" id="html" name="fav_language" value="HTML" checked>
-    <label for="html">HTML</label><br>
-    <input type="checkbox" id="css" name="fav_language" value="CSS">
-    <label for="css">CSS</label><br>
-    <input type="checkbox" id="javascript" name="fav_language" value="JAVASCRIPT">
-    <label for="javascript">JAVASCRIPT</label><br>    
-    
 </body>
 </html>
