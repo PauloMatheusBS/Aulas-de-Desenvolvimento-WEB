@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./page.php">
+    
+    <fieldset> <legend> <h1>Cadastro de Usuário</h1> </legend>
+    <fieldset> <legend>Nomes</legend>
+    <label for="text">Primeiro Nome:</label> <br>
+    <input type="text" id="fname" name="fname" placeholder="Digite Primeiro Nome" maxlength="20" size="10" required><br><br>
+    <label for="text">Nome do Meio:</label> <br>
+    <input type="text" id="mname" name="mname" placeholder="Digite Nome do Meio" maxlength="20" size="10" required><br><br>
+    <label for="text">Ultimo Nome:</label> <br>
+    <input type="text" id="lname" name="lname" placeholder="Digite Ultimo Nome" maxlength="20" size="10" required><br><br>
+    <label for="text">Apelido:</label> <br>
+    <input type="text" id="aname" name="aname" placeholder="Digite seu Apelido" maxlength="20" size="10" required><br><br>
+    </fieldset>
+    <fieldset > <legend>Qual sua Linguagem Preferida:</legend>
+        <input type="radio" id="html" name="fav_language" value="HTML" checked>
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JAVASCRIPT">
+        <label for="javascript">JAVASCRIPT</label><br>
+    </fieldset > <br> 
+
+    <fieldset > <legend>Login:</legend>
+    <label for="text">E-mail:</label> <br>
+    <input type="email" name="email" id="email" size="20" maxlength="30" placeholder="exemplo@exemplo.com" required><br> <br>
+
+    <label for="text">Senha:</label> <br>
+    <input type="password" name="Senha" id="campos" size="20" maxlength="10" placeholder="abc@123" required><br> <br>
+    </fieldset>
+
+    <fieldset > <legend>Contato:</legend>
+    <label for="text">Telefone:</label> <br>
+    <input type="tel" id="telefone" name="telefone" placeholder="(XX)XXXXX-XXXX" pattern="(0-9)(2)(0-9)(5)-(0-9)(4)" required><br> <br>
+    </fieldset>
+
+    <fieldset > <legend>Dados Pessoais</legend>
+    <label for="text">Data Nascimento:</label> <br> <input type="date" name="date" id="campos=d" size="20" maxlength="10" placeholder="00-00-0000"> <br> <br>
+
+    <label for="cor"> Cor Favorita: </label> <br>
+    <input type="color" id="cor" name="cor"><br> <br>
+
+    <label for="idade">Idade:</label> <br>
+    <input type="number" id="idade" name="idade" min="0" max="120">  <br><br>
+
+
+    <label for="text">Gênero:</label> <br>
+    <input type="radio" id="sex" name="sex" value="Masc" >
+    <label for="masc">Masculino</label><br>
+    <input type="radio" id="sex" name="sex" value="Femi">
+    <label for="fem">Feminino</label><br><br>
+    
+    <label for="text">Escolha seus times favoritos:</label> <br>
+    <input type="checkbox" id="time" name="fav_team" value="Flamengo" >
+    <label for="fla">Flamengo</label><br>
+    <input type="checkbox" id="time" name="fav_team" value="Palmeiras">
+    <label for="pal">Palmeiras</label><br>
+    <input type="checkbox" id="time" name="fav_team" value="Corinthians">
+    <label for="cor">Corinthians</label><br> <br> 
+
+    <label for="text">País de Origem:</label> <br>
+    <select id="pais" name="pais">
+    <option value="brasil">BRASIL</option>
+    <option value="eua">EUA</option>
+    <option value="japao">JAPÃO</option>
+    </select><br> <br>
+
+    <label for="arquivo"> Envie sua Foto de Perfil: </label><br>
+    <input type="file" id="arquivo" name="arquivo"><br> <br>
+
+    <label for="pesquisa"> Pesquisar algo: </label><br>
+    <input type="search" id="pesquisa" name="pesquisa" placeholder="Buscar..." required>
+    <button type="submit">Pesquisar</button> <br> <br> <br>
+    
+    <input type="submit" value="Cadastrar">
+    <button type="reset">Limpar Formulario</button>
+
+    </fieldset>
+    </fieldset>
+    </form>
+</body>
+</html>
