@@ -8,7 +8,7 @@
 <body>
     <form action="./send.php">
         <h1>Formulárioooo</h1>
-        <fieldset> <legend> Dados Pessoais </legend>
+        <fieldset> <legend> <b>• Dados Pessoais </b></legend>
             <label for="text">Nome Completo:</label> <br>
             <input type="text" id="name" name="name" placeholder="Digite Seu Nome Completo:" maxlength="20" size="50" required><br><br>
             <label for="idade">Idade:</label> <br>
@@ -20,7 +20,7 @@
             <label for="text">Titulo de Eleitor:</label> <br>
             <input type="text" id="title" name="title" placeholder="Digite o Número do Titulo de Eleitor:" maxlength="20" size="30" required><br><br>
         </fieldset>
-        <fieldset> <legend> Endereço </legend>
+        <fieldset> <legend> <b>• Endereço</b> </legend>
             <label for="text">Rua:</label> <br>
             <input type="text" id="adress" name="adress" placeholder="Digite o Nome da sua Rua:" maxlength="20" size="50" required><br><br>
             <label for="text">Numero:</label> <br>
@@ -35,38 +35,123 @@
             <input type="text" id="estate" name="estate" placeholder="Digite Seu Estado:" maxlength="20" size="20" required><br><br>
 
         </fieldset>
-        <fieldset> <legend> Dados Financeiros </legend>
-            <label for="text">Rua:</label> <br>
-            <input type="text" id="adress" name="adress" placeholder="Digite o Nome da sua Rua:" maxlength="20" size="50" required><br><br>
-            <label for="text">Numero:</label> <br>
-            <input type="text" id="number" name="number" placeholder="Digite o Número da Casa:" maxlength="20" size="20" required><br><br>
-            <label for="text">Bairro:</label> <br>
-            <input type="text" id="ba" name="ba" placeholder="Digite Seu Bairro:" maxlength="20" size="20" required><br><br>
-            <label for="text">CEP:</label> <br>
-            <input type="text" id="CEP" name="CEP" placeholder="Digite Seu CEP:" maxlength="20" size="20" required><br><br>
-            <label for="text">Cidade:</label> <br>
-            <input type="text" id="city" name="city" placeholder="Digite Sua Cidade:" maxlength="20" size="20" required><br><br>
-            <label for="text">Estado:</label> <br>
-            <input type="text" id="estate" name="estate" placeholder="Digite Seu Estado:" maxlength="20" size="20" required><br><br>
-        
+        <fieldset> <legend> <b>• Dados Financeiros</b> </legend>                
+                <label for="annualRevenue">Receita Anual:</label><br>
+                <input type="number" id="annualRevenue" name="annualRevenue" placeholder="Digite a Receita Anual" required><br><br>
+            
+                <label for="cac">Custo de Aquisição de Clientes (CAC):</label><br>
+                <input type="number" id="cac" name="cac" placeholder="Digite o CAC" required><br><br>
+            
+                <label for="grossProfit">Lucro Bruto:</label><br>
+                <input type="number" id="grossProfit" name="grossProfit" placeholder="Digite o Lucro Bruto" required><br><br>
+            
+                <label for="netProfitMargin">Margem de Lucro Líquido (%):</label><br>
+                <input type="number" id="netProfitMargin" name="netProfitMargin" placeholder="Digite a Margem de Lucro Líquido" step="0.01" required><br><br>
+            
+                <label for="totalAssets">Ativos Totais:</label><br>
+                <input type="number" id="totalAssets" name="totalAssets" placeholder="Digite o Valor dos Ativos Totais" required><br><br>
         </fieldset>
-        <fieldset> <legend> <h1>• Dados Comerciais</h1> </legend>
-        
+        <fieldset> <legend> <b>• Dados Comerciais</b> </legend>
+            <label for="businessName">Nome da Empresa:</label> <br>
+            <input type="text" id="businessName" name="businessName" placeholder="Digite o Nome da Empresa:" maxlength="50" required><br><br>
+            
+            <label for="cnae">CNAE:</label> <br>
+            <input type="text" id="cnae" name="cnae" placeholder="Digite o CNAE da Empresa:" maxlength="20" required><br><br>
+            
+            <label for="businessAddress">Endereço da Empresa:</label> <br>
+            <input type="text" id="businessAddress" name="businessAddress" placeholder="Digite o Endereço da Empresa:" maxlength="100" required><br><br>
+            
+            <label for="businessPhone">Telefone da Empresa:</label> <br>
+            <input type="tel" id="businessPhone" name="businessPhone" placeholder="Digite o Telefone da Empresa:" maxlength="15" required><br><br>
+            
+            <label for="businessEmail">Email da Empresa:</label> <br>
+            <input type="email" id="businessEmail" name="businessEmail" placeholder="Digite o Email da Empresa:" maxlength="50" required><br><br>
+            
         </fieldset>
-        <fieldset> <legend> <h1>• Cadastro Veículo</h1> </legend>
-        
+        <fieldset> <legend> <b>• Cadastro Veículo</b> </legend>
+            <label for="vehicleModel">Modelo do Veículo:</label> <br>
+            <input type="text" id="vehicleModel" name="vehicleModel" placeholder="Digite o Modelo do Veículo:" maxlength="50" required><br><br>
+            
+            <label for="vehicleYear">Ano do Veículo:</label> <br>
+            <input type="number" id="vehicleYear" name="vehicleYear" min="1900" max="2100" required><br><br>
+            
+            <label for="vehiclePlate">Placa do Veículo:</label> <br>
+            <input type="text" id="vehiclePlate" name="vehiclePlate" placeholder="Digite a Placa do Veículo:" maxlength="10" required><br><br>
+            
+            <label for="vehicleColor">Cor do Veículo:</label> <br>
+            <input type="text" id="vehicleColor" name="vehicleColor" placeholder="Digite a Cor do Veículo:" maxlength="20" required><br><br>
+            
+            <label for="vehicleChassis">Número do Chassi:</label> <br>
+            <input type="text" id="vehicleChassis" name="vehicleChassis" placeholder="Digite o Número do Chassi:" maxlength="30" required><br><br>
+            
         </fieldset>
-        <fieldset> <legend> <h1>• Cadastro Imóvel</h1> </legend>
-        
+        <fieldset> <legend> <b>• Cadastro Imóvel</b> </legend>
+            <label for="propertyType">Tipo de Imóvel:</label> <br>
+            <input type="text" id="propertyType" name="propertyType" placeholder="Digite o Tipo de Imóvel:" maxlength="30" required><br><br>
+            
+            <label for="propertyAddress">Endereço do Imóvel:</label> <br>
+            <input type="text" id="propertyAddress" name="propertyAddress" placeholder="Digite o Endereço do Imóvel:" maxlength="100" required><br><br>
+            
+            <label for="propertyArea">Área do Imóvel (m²):</label> <br>
+            <input type="number" id="propertyArea" name="propertyArea" min="0" required><br><br>
+            
+            <label for="propertyValue">Valor do Imóvel:</label> <br>
+            <input type="number" id="propertyValue" name="propertyValue" min="0" required><br><br>
+            
+            <label for="propertyRegistration">Registro do Imóvel:</label> <br>
+            <input type="text" id="propertyRegistration" name="propertyRegistration" placeholder="Digite o Registro do Imóvel:" maxlength="30" required><br><br>
+            
         </fieldset>
-        <fieldset> <legend> <h1>• Dados Cônjuge</h1> </legend>
-        
+        <fieldset> <legend> <b>• Dados Cônjuge</b> </legend>
+            <label for="spouseName">Nome do Cônjuge:</label> <br>
+            <input type="text" id="spouseName" name="spouseName" placeholder="Digite o Nome do Cônjuge:" maxlength="50" required><br><br>
+            
+            <label for="spouseRg">RG do Cônjuge:</label> <br>
+            <input type="text" id="spouseRg" name="spouseRg" placeholder="Digite o RG do Cônjuge:" maxlength="20" required><br><br>
+            
+            <label for="spouseCpf">CPF do Cônjuge:</label> <br>
+            <input type="text" id="spouseCpf" name="spouseCpf" placeholder="Digite o CPF do Cônjuge:" maxlength="20" required><br><br>
+            
+            <label for="spouseOccupation">Profissão do Cônjuge:</label> <br>
+            <input type="text" id="spouseOccupation" name="spouseOccupation" placeholder="Digite a Profissão do Cônjuge:" maxlength="30" required><br><br>
+            
+            <label for="spouseIncome">Renda do Cônjuge:</label> <br>
+            <input type="number" id="spouseIncome" name="spouseIncome" min="0" required><br><br>
+            
         </fieldset>
-        <fieldset> <legend> <h1>• Dados Filhos</h1> </legend>
-        
+        <fieldset> <legend> <b>• Dados Filhos</b> </legend>
+            <label for="childName">Nome do Filho:</label> <br>
+            <input type="text" id="childName" name="childName" placeholder="Digite o Nome do Filho:" maxlength="50" required><br><br>
+            
+            <label for="childAge">Idade do Filho:</label> <br>
+            <input type="number" id="childAge" name="childAge" min="0" max="18" required><br><br>
+            
+            <label for="childSchool">Escola do Filho:</label> <br>
+            <input type="text" id="childSchool" name="childSchool" placeholder="Digite o Nome da Escola:" maxlength="50"><br><br>
+            
+            <label for="childHealth">Saúde do Filho:</label> <br>
+            <input type="text" id="childHealth" name="childHealth" placeholder="Digite Informações de Saúde:" maxlength="100"><br><br>
+            
+            <label for="childResponsibility">Responsável pelo Filho:</label> <br>
+            <input type="text" id="childResponsibility" name="childResponsibility" placeholder="Digite o Nome do Responsável:" maxlength="50" required><br><br>
+            
         </fieldset>
-        <fieldset> <legend> <h1>• Dados Formação Escolar</h1> </legend>
-        
+        <fieldset> <legend> <b>• Dados Formação Escolar</b> </legend>
+            <label for="childName">Nome do Filho:</label> <br>
+            <input type="text" id="childName" name="childName" placeholder="Digite o Nome do Filho:" maxlength="50" required><br><br>
+            
+            <label for="childAge">Idade do Filho:</label> <br>
+            <input type="number" id="childAge" name="childAge" min="0" max="18" required><br><br>
+            
+            <label for="childSchool">Escola do Filho:</label> <br>
+            <input type="text" id="childSchool" name="childSchool" placeholder="Digite o Nome da Escola:" maxlength="50"><br><br>
+            
+            <label for="childHealth">Saúde do Filho:</label> <br>
+            <input type="text" id="childHealth" name="childHealth" placeholder="Digite Informações de Saúde:" maxlength="100"><br><br>
+            
+            <label for="childResponsibility">Responsável pelo Filho:</label> <br>
+            <input type="text" id="childResponsibility" name="childResponsibility" placeholder="Digite o Nome do Responsável:" maxlength="50" required><br><br>
+            
         </fieldset>
 
 
