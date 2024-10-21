@@ -13,11 +13,18 @@ body {
     line-height: 1.6;
 }
 
+textando {
+    text-align: center;
+    margin: 20px 0;
+}
+
 
 h1 {
     text-align: center;
     margin: 20px 0;
 }
+
+
 
 
 nav {
@@ -83,4 +90,16 @@ picture {
 .NomeClasse{
     color: red;                          /*classe pode receber varios seletores e segue o padrao para a classe*/
     font-weight: bold;
+}
+
+#p3 {
+    text-align: justify;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: serif;
+}
+
+#p4 {
+
+
 }
