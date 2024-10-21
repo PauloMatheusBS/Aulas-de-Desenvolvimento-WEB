@@ -69,3 +69,13 @@ picture {
     text-align: center;
     margin: 20px 0;
 }
+
+
+#p1 {
+    margin: 20px;
+    color: blue;
+}
+#p2 { 
+    margin: 20px;
+    color: rgb(0, 255, 149);
+}
