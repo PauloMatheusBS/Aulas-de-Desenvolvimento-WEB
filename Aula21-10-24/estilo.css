@@ -101,14 +101,16 @@ picture {
 
 #p4 {
 
-
 }
 
 #p5{
-    color: deeppink;
+    color: rgb(255, 20, 224);
     font-style: oblique;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
+    margin-left: 10px;
     font-weight: bold;
-
+    border: #575757;
+    border-style: solid;
 }
+
