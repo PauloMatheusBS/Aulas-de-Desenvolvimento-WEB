@@ -79,3 +79,8 @@ picture {
     margin: 20px;
     color: rgb(0, 255, 149);
 }
+
+.NomeClasse{
+    color: red;                          /*classe pode receber varios seletores e segue o padrao para a classe*/
+    font-weight: bold;
+}
