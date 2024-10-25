@@ -17,6 +17,15 @@ body {
     display: inline-block;
 }
 
+.quadro1:hover{
+    background-color: red;
+}
+
+.quadro1:active{
+    background-color: rgb(255, 251, 0);
+}
+
+
 .quadro2 {
     padding: 10px; 
     text-align: justify; 
@@ -29,6 +38,15 @@ body {
     box-shadow: 1px 1pc 8px grey;
     display: inline-block;
 }
+
+.quadro2:hover{
+    background-color: blue;
+}
+
+.quadro2:active{
+    background-color: rgb(255, 251, 0);
+}
+
 .quadro3 {
     padding: 10px; 
     text-align: justify;
@@ -40,6 +58,14 @@ body {
     color: green;  
     box-shadow: 1px 1pc 8px grey;
     display: inline-block;
+}
+
+.quadro3:hover{
+    background-color: red;
+}
+
+.quadro3:active{
+    background-color: rgb(255, 251, 0);
 }
 
 .quadro4 {
@@ -67,3 +93,4 @@ body {
 }
 
 
+ 
