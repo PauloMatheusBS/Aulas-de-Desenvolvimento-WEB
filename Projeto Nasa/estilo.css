@@ -1,0 +1,54 @@
+#logo {
+    margin-left: 40%;
+    margin-right: 45%;
+    
+}
+
+
+
+.barra_inicio{
+    background-image: url(./espaco.jpg);
+    text-size-adjust: 40;
+    display: block;
+    text-align: center;
+    padding: 1%;
+}
+
+#home {color: white;font-size: 30px;} 
+#novidades {color: white;font-size: 30px;}
+#espaço {color: white;font-size: 30px;}
+#clima_terra {color: white;font-size: 30px;}
+#sobre {color: white;font-size: 30px;}
+#contato{color: white;font-size: 30px;}
+
+#imagem_inicial {
+    margin-right: 1px;
+    margin-left: 1px;
+    width: auto;
+    height: 2828px;
+
+}
+
+nav a {
+    margin: 0 90px; 
+    position: center;
+}
+
+.buscar{
+    position: absolute;
+    margin-left: 85%;
+    color: white;
+
+}
+
+body{
+    background-image: url(./espaco.jpg);
+}
+
+#imagem_novidades{
+    margin-right: 1px;
+    margin-left: 1px;
+    width: 100%;
+    height: 600px;
+
+}
