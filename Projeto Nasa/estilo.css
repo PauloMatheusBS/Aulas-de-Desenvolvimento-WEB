@@ -57,3 +57,35 @@ body{
     margin-left: 15%;
 
 }
+
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #f0f0f0;
+}
+
+article {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+article h2 {
+    margin: 0 0 10px;
+    color: #ffcc00; /* Destaque para os títulos */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
