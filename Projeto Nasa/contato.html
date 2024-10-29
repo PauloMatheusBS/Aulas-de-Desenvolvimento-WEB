@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilo.css">
-        <title>NASA</title>
-        <link rel="shortcut icon" href="./nasa-logo.svg">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Contato - NASA</title>
+    <link rel="shortcut icon" href="./nasa-logo.svg">
+</head>
 <body>
     <nav class="barra_inicio">
         <nav class="buscar">
-            <a1 id="buscar">Buscar</a1>
+            <a id="buscar">Buscar</a>
             <input id="in_buscar" placeholder="Digite sua busca">
         </nav>
         <a href="./home.html"><img id="logo" src="./nasa-logo.svg" alt="NASA Logo"></a><br>
-        <a id="home" href="home.html"> Home  </a> |
+        <a id="home" href="home.html"> Home </a> |
         <a id="novidades" href="novidades.html"> Novidades </a> |
         <a id="espaço" href="espaço.html"> Espaço </a> |
         <a id="clima_terra" href="clima_terra.html"> Clima e Terra </a> |
         <a id="sobre" href="sobre_a_nasa.html"> Sobre a Nasa </a> |
         <a id="contato" href="contato.html"> Contato </a> |
     </nav>
+    
+    <main id="form">
+        <h1>Contato</h1>
+        <p>Se você tem perguntas ou deseja entrar em contato conosco, sinta-se à vontade para preencher o formulário abaixo:</p>
+        
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 NASA. Todos os direitos reservados.</p>
+        <div class="redes_sociais">
+            <a href="https://twitter.com/NASA">Twitter</a> |
+            <a href="https://facebook.com/NASA">Facebook</a> |
+            <a href="https://instagram.com/NASA">Instagram</a>
+        </div>
+    </footer>
 </body>
 </html>
