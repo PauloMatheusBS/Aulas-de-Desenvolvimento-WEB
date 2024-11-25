@@ -32,3 +32,55 @@ h6{
    z-index: 1;
 }
 
+@media(max-width: 767px) {
+   .grid-container {  
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 10px;
+      background-color: red;
+      padding: 10px;
+   }
+
+   .grid-container > div {  
+      background-color: yellow;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+   }
+}
+
+
+@media(min-width: 767px) {
+   .grid-container {  
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 10px;
+      background-color: blue;
+      padding: 10px;
+   }
+
+   .grid-container > div {  
+      background-color: green;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+   }
+}
+
+
+@media(min-width: 767px) {
+   .grid-container {  
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 10px;
+      background-color: blue;
+      padding: 10px;
+   }
+
+   .grid-container > div {  
+      background-color: green;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+   }
+}
