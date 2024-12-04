@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de Regex</title>
+    <style>
+        .span-required{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultados dos Testes de Regex</h1>
+    <div>
+        <input type="text" placeholder="Digite seu e-mail:" class="input required" oninput="emailValidate()">
+        <span class="span-required">O Email deve ter o padrão email@empresa.com.br</span>
+    </div>
+
+    <script>
+        document.write("Resultado 1: ", /[az]/i.test("AZ"), "<br>");
+        document.write("Resultado 2: ", /love/i.test("LOVE"), "<br>");
+        document.write("Resultado 3: ", /[bx]/.test("123x"), "<br>");
+        document.write("Resultado 4: ", /\s/.test(" w"), "<br>");
+        let regex = /^\d{2}\/\d{2}\/\d{4}$/;
+        document.write("Teste 1 (10/12/2024): " + regex.test("10/12/2024") + "<br>");
+        document.write("Teste 2 (01-01-2024): " + regex.test("01-01-2024") + "<br>");
+        document.write("Teste 3 (10/2024/12): " + regex.test("10/2024/12") + "<br>");
+        document.write("Teste 4 (1/1/2024): " + regex.test("1/1/2024") + "<br>");
+        var dia = /^(0[1-9]|[12][0-9]|3[01])$/
+        document.write(dia.test("32"), "<br>") 
+        var mes = /^(0[1-9]|1[0-2])$/
+        document.write(mes.test("12"), "<br>")
+        var ano = /^\d{4}$/;
+        document.write(ano.test("24"), "<br>") 
+        document.write(ano.test("2024"), "<br>") 
+        var completa = /^(0[1-9]|[12][0-9]|3[01])([0][1-9]|1[0-2])\d{4}$/;
+        document.write("Resultado para '31022024': " + completa.test("31022024") + "<br>");
+        document.write("Resultado para '00052024': " + completa.test("00052024") + "<br>");
+        document.write("Resultado para '29022024': " + completa.test("29022024") + "<br>");
+        var cpf = /^([0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2})$/
+        document.write("Resultado para '012.321.123-45': " + cpf.test("012.321.123-45") + "<br>");
+        document.write("Resultado para '01232112345': " + cpf.test("01232112345") + "<br>");
+        var email = /^[a-zA-Z0-9._%+-]+\@[a-zA-Z0-9.-]+\.[a-zA-Z.]{2,}$/
+        document.write("Resultado para 'paulo@paulo.com': " + email.test("paulo@paulo.com") + "<br>");
+        document.write("Resultado para 'paulopaulo.com': " + email.test("paulopaulo.com") + "<br>");
+
+        function removeError() {
+            spans[index].style.display = "block";
+            spans[index].style.color = "red";
+        }
+        function setError() {
+            spans[index].style.display = 'none';
+        }
+
+
+        function emailValidate() {
+            const input = document.querySelector('.required'); 
+            const span = document.querySelector('.span-required'); 
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
+            
+
+            // if (email.test(inputs[0].value)){
+            //         removeError(0);
+            //     }
+            // else{
+            //         setError(0);
+            //     }
+
+            if (emailRegex.test(input.value)) {
+                span.style.display = 'none'; 
+            } 
+            else {
+                span.style.display = 'inline'; 
+            }
+        }
+        
+
+
+
+    </script>
+</body>
+</html>

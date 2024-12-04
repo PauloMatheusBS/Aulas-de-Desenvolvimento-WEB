@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Regex com JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .erro {
+            color: red;
+        }
+        .sucesso {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Expressão Regular (Regex)</h1>
+    <p>Digite uma string para verificar se contém apenas letras e números:</p>
+    
+    <!-- Campo de entrada de texto -->
+    <input type="text" id="entradaTexto" placeholder="Digite algo...">
+    <button onclick="testarRegex()">Testar</button>
+    
+    <!-- Exibe o resultado -->
+    <div id="resultado" class="resultado"></div>
+    
+    <script>
+        // Função para testar o regex
+        function testarRegex() {
+            // Definindo a expressão regular
+            const regex = /^[a-zA-Z0-9]+$/; // Apenas letras e números
+
+            // Obtendo o valor da entrada de texto
+            const texto = document.getElementById('entradaTexto').value;
+
+            // Elemento para exibir o resultado
+            const resultadoDiv = document.getElementById('resultado');
+
+            // Testando a string
+            if (regex.test(texto)) {
+                // Se passar no regex
+                resultadoDiv.textContent = `A string "${texto}" é válida!`;
+                resultadoDiv.className = 'resultado sucesso';  // Altera a cor para verde
+            } else {
+                // Se não passar no regex
+                resultadoDiv.textContent = `A string "${texto}" é inválida!`;
+                resultadoDiv.className = 'resultado erro';  // Altera a cor para vermelho
+            }
+        }
+    </script>
+</body>
+</html>

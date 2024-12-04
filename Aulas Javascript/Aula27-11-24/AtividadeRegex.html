@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJMS</title>
+    <style>
+        .span-required {
+            display: none;
+            color: red;
+        }
+        h6{
+            color: red;
+            display: inline;
+        }
+
+        label{
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Regex TJMS</h1>
+
+    <div>
+        <label>Consultar por <h6>*</h6></label> </br>
+        <input type="text" id="processo" placeholder="Digite o numero do processo" class="input required" oninput="processoValidate()">
+        <span class="span-required">O número do processo deve seguir o padrão 1234567-12.1234.1.12.1234</span>
+    </div>
+
+    <script>
+        function processoValidate() {
+            const input = document.querySelector('.required'); 
+            const span = document.querySelector('.span-required'); 
+            const regexProcesso = /^\d{7}\-\d{2}\.\d{4}\.\d{1}\.\d{2}\.\d{4}$/
+            
+
+            if (regexProcesso.test(input.value)) {
+                span.style.display = 'none'; 
+            } else {
+                span.style.display = 'inline'; 
+            }
+        }
+    </script>
+
+</body>
+</html>
