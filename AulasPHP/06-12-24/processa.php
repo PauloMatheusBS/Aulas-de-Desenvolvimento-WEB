@@ -86,7 +86,7 @@ $nome = $_POST["nome"];
 $senha = $_POST["senha"];
 
 // Preparar a consulta para buscar o usuário com o nome fornecido
-$query = "SELECT id, nome, senha FROM user WHERE nome = ?";
+$query = "SELECT id, nome, senha, setor FROM user WHERE nome = ?";
 $stmt = $con->prepare($query);
 
 // Verifica se a preparação da query foi bem-sucedida
@@ -109,6 +109,7 @@ if ($result->num_rows === 0) {
     echo "<a href='index.html'>Voltar ao formulário</a>";
     exit();
 }
+
 // Recupera o usuário encontrado
 $user = $result->fetch_assoc();
 
@@ -119,16 +120,27 @@ if ($senha === $user['senha']) {
     $_SESSION['user_nome'] = $user['nome'];
     $_SESSION['user_setor'] = $user['setor'];  // Armazena o setor na sessão
 
+    // Depuração: verificar o valor de $_SESSION['user_setor']
+    // Você pode remover esta linha depois de verificar
+    echo $_SESSION['user_setor'];  // Verifica o valor do setor
+    // exit(); // Remover ou comentar essa linha depois da depuração
+
     // Redireciona para a página correta de acordo com o setor
     if ($_SESSION['user_setor'] === 'ADMIN') {
-        header("Location: admin_dashboard.php");
+        header("Location: admin_dashboard.php");  // Redireciona para admin
+        exit();
     } else if ($_SESSION['user_setor'] === 'COLABORADOR') {
-        header("Location: colaborador_dashboard.php");
+        header("Location: colaborador_dashboard.php");  // Redireciona para colaborador
+        exit();
     }
-    exit();
 } else {
     echo "<p style='color:red;'>Usuário ou senha inválidos.</p>";
     echo "<a href='index.html'>Voltar ao formulário</a>";
 }
 
+// Fechar a conexão
+$stmt->close();
+$con->close();
 ?>
+
+

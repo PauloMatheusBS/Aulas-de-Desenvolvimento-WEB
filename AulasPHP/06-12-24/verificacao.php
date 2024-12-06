@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 // Verifica se o usuário está logado
@@ -7,10 +7,10 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// Se for necessário, você pode verificar o setor aqui, por exemplo:
+// Verificação do setor - exemplo de controle para ADMIN
 if ($_SESSION['user_setor'] !== 'ADMIN') {
-    echo "<p style='color:red;'>Você não tem permissão para acessar esta página.</p>";
+    // Mensagem genérica ou redirecionamento para uma página de erro
+    header("Location: acesso_negado.php");
     exit();
 }
 ?>
-

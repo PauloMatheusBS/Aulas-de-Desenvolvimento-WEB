@@ -3,7 +3,7 @@ session_start();
 
 // Verifica se o usuário está logado e se é do setor ADMIN
 if (!isset($_SESSION['user_id']) || $_SESSION['user_setor'] !== 'ADMIN') {
-    echo "<p style='color:red;'>Você não tem permissão para acessar esta página.</p>";
+    header("Location: acesso_negado.php"); // Redireciona para uma página de erro ou login
     exit();
 }
 
