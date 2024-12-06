@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Reais para Dólares</title>
+</head>
+<body>
+    <h1>Conversão de Reais para Dólares</h1>
+    
+    <script>
+        
+        let valorReais = parseFloat(prompt("Digite o valor em reais (R$):"));
+
+        
+        let cotacaoDolar = parseFloat(prompt("Digite a cotação do dólar (R$ por US$):"));
+
+        
+        let valorDolares = valorReais / cotacaoDolar;
+
+        
+        alert("Valor em dólares: US$ " + valorDolares.toFixed(2));
+    </script>
+</body>
+</html>

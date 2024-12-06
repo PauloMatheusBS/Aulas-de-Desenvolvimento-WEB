@@ -1,7 +1,6 @@
 <?php
-// Verifica se o formulário foi enviado via POST
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recebe os dados do formulário
     $nome = $_POST['nome'];
     $rg = $_POST['rg'];
     $cpf = $_POST['cpf'];
@@ -17,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $profissao = $_POST['profissao'];
     $hobby = $_POST['hobby'];
 
-    // Cria um array com os dados do formulário
+    
     $dados = [
         'nome' => $nome,
         'rg' => $rg,
@@ -35,15 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'hobby' => $hobby
     ];
 
-    // Redireciona para a página 'exibir.php' com os dados via URL
+    
     header("Location: exibir.php?" . http_build_query($dados));
     exit();
 }
 ?>
 
-<!-- O resto do código do formulário permanece igual -->
+
 <form action="index.php" method="POST">
-    <!-- Campos do formulário -->
     <label for="nome">Nome:</label><br>
     <input type="text" id="nome" name="nome" required><br><br>
 

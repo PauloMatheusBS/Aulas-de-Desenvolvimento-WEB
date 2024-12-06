@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Venda</title>
+</head>
+<body>
+    <h1>Calculadora de Venda</h1>
+    
+    <script>
+        let nomeProduto = prompt("Digite o nome do produto:");
+
+        let quantidade = parseInt(prompt("Digite a quantidade comprada:"));
+
+        
+        let valorUnitario = parseFloat(prompt("Digite o valor unitário do produto:"));
+
+        
+        let percentualDesconto = parseFloat(prompt("Digite o percentual de desconto:"));
+
+        
+        let valorTotal = quantidade * valorUnitario;
+
+        
+        let desconto = (percentualDesconto / 100) * valorTotal;
+
+        
+        let valorFinal = valorTotal - desconto;
+
+        
+        alert("Produto: " + nomeProduto + "\nValor Total com Desconto: R$ " + valorFinal.toFixed(2));
+    </script>
+</body>
+</html>

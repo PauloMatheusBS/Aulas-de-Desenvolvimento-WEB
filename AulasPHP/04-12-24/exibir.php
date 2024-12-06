@@ -6,7 +6,7 @@ $cpf = $_GET['cpf'];
 $endereco = $_GET['endereco'];
 $idade = $_GET['idade'];
 $data_nascimento = $_GET['data_nascimento'];
-$epoca = $_GET['epoca'];
+$epoca = $_GET['epoca'];  // Preferências de época
 $sexo = $_GET['sexo'];
 $cor = $_GET['cor'];
 $telefone = $_GET['telefone'];
@@ -14,6 +14,11 @@ $email = $_GET['email'];
 $estado_civil = $_GET['estado_civil'];
 $profissao = $_GET['profissao'];
 $hobby = $_GET['hobby'];
+
+// Se o valor de $epoca for uma string (seleção única), transforme-o em um array para usar o implode
+if (!is_array($epoca)) {
+    $epoca = array($epoca);
+}
 
 // Exibe os dados em uma tabela formatada
 echo "<h2>Dados Enviados:</h2>";
