@@ -120,23 +120,19 @@ if ($senha === $user['senha']) {
     $_SESSION['user_nome'] = $user['nome'];
     $_SESSION['user_setor'] = $user['setor'];  // Armazena o setor na sessão
 
-    // Depuração: verificar o valor de $_SESSION['user_setor']
-    // Você pode remover esta linha depois de verificar
-    echo $_SESSION['user_setor'];  // Verifica o valor do setor
-    // exit(); // Remover ou comentar essa linha depois da depuração
-
     // Redireciona para a página correta de acordo com o setor
     if ($_SESSION['user_setor'] === 'ADMIN') {
-        header("Location: admin_dashboard.php");  // Redireciona para admin
-        exit();
+        header("Location: admin_dashboard.php");
     } else if ($_SESSION['user_setor'] === 'COLABORADOR') {
-        header("Location: colaborador_dashboard.php");  // Redireciona para colaborador
-        exit();
+        header("Location: colaborador_dashboard.php");
     }
+    exit();
 } else {
     echo "<p style='color:red;'>Usuário ou senha inválidos.</p>";
     echo "<a href='index.html'>Voltar ao formulário</a>";
 }
+
+
 
 // Fechar a conexão
 $stmt->close();
