@@ -58,7 +58,7 @@ if ($con->connect_errno) {
 }
 
 // Iniciando a sessão
-session_start();
+// session_start();
 
 // Verificando se os campos nome e senha foram preenchidos
 if (empty($_POST["nome"]) || empty($_POST["senha"])) {
@@ -67,34 +67,27 @@ if (empty($_POST["nome"]) || empty($_POST["senha"])) {
     exit();
 }
 
-// Sanitize inputs
-$nome = trim($_POST["nome"]);
-$senha = trim($_POST["senha"]);
+// Recebe os dados enviados pelo formulário
+$nome = $_POST["nome"];
+$senha = $_POST["senha"];
 
-// Validação básica dos dados
-if(strlen($nome) < 3 || strlen($senha) < 6) {
-    echo "<p style='color:red;'>Nome de usuário ou senha inválidos (mínimo de 3 caracteres para nome e 6 para senha).</p>";
-    echo "<a href='index.html'>Voltar ao formulário</a>";
-    exit();
-}
-
-// Usando prepared statements para evitar SQL Injection
+// Preparar a consulta para buscar o usuário com o nome fornecido
 $query = "SELECT id, nome, senha FROM user WHERE nome = ?";
 $stmt = $con->prepare($query);
 
-// Verifica se a preparação do statement foi bem-sucedida
+// Verifica se a preparação da query foi bem-sucedida
 if ($stmt === false) {
     echo "Erro ao preparar a consulta: " . $con->error;
     exit();
 }
 
-// Bind dos parâmetros
+// Vincula o parâmetro (nome do usuário) à declaração
 $stmt->bind_param("s", $nome);
 
 // Executa a consulta
 $stmt->execute();
 
-// Verifica se foi encontrado o usuário
+// Verifica se o usuário foi encontrado
 $result = $stmt->get_result();
 
 if ($result->num_rows === 0) {
@@ -118,6 +111,57 @@ if (password_verify($senha, $user['senha'])) {
 } else {
     echo "<p style='color:red;'>Usuário ou senha inválidos.</p>";
     echo "<a href='index.html'>Voltar ao formulário</a>";
+}
+
+// Fechar a conexão
+$stmt->close();
+$con->close();
+?>
+
+
+<?php
+// Definindo as variáveis para conexão com o banco
+$host = "10.28.2.59";
+$usuario = "suporte";
+$senha = "suporte";
+$bd = "Biblioteca";
+
+// Estabelecendo a conexão com o banco de dados
+$con = new mysqli($host, $usuario, $senha, $bd);
+
+// Verificando se houve erro na conexão
+if ($con->connect_errno) {
+    echo "Falha na Conexão: (" . $con->connect_errno . ") " . $con->connect_error;
+    exit();
+}
+
+// Dados do usuário (nome e senha) que você quer cadastrar
+$nome = 'paulom';  // Exemplo de nome
+$senha_usuario = '1234567';  // Exemplo de senha
+
+// Gerar o hash da senha
+$senha_hash = password_hash($senha_usuario, PASSWORD_DEFAULT);
+
+// Preparar a query para inserir o usuário com a senha hash
+$query = "INSERT INTO user (nome, senha) VALUES (?, ?)";
+
+// Preparar a declaração SQL
+$stmt = $con->prepare($query);
+
+// Verifica se a preparação da query foi bem-sucedida
+if ($stmt === false) {
+    echo "Erro ao preparar a consulta: " . $con->error;
+    exit();
+}
+
+// Vincula os parâmetros (nome e senha com hash) à declaração
+$stmt->bind_param("ss", $nome, $senha_hash);
+
+// Executa a consulta
+if ($stmt->execute()) {
+    echo "Usuário cadastrado com sucesso!";
+} else {
+    echo "Erro ao cadastrar o usuário: " . $stmt->error;
 }
 
 // Fechar a conexão
