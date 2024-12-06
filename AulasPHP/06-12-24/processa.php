@@ -72,6 +72,7 @@ if ($con->connect_errno) {
 
 // Iniciando a sessão
 session_start();
+include("verificacao.php");
 
 // Verificando se os campos nome e senha foram preenchidos
 if (empty($_POST["nome"]) || empty($_POST["senha"])) {
