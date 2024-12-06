@@ -109,7 +109,6 @@ if ($result->num_rows === 0) {
     echo "<a href='index.html'>Voltar ao formulário</a>";
     exit();
 }
-
 // Recupera o usuário encontrado
 $user = $result->fetch_assoc();
 
@@ -118,16 +117,18 @@ if ($senha === $user['senha']) {
     // Login bem-sucedido
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['user_nome'] = $user['nome'];
-    echo "<p>Bem-vindo, " . htmlspecialchars($user['nome']) . "!</p>";
-    // Redireciona para a página protegida
-    header("Location: dashboard.php");
+    $_SESSION['user_setor'] = $user['setor'];  // Armazena o setor na sessão
+
+    // Redireciona para a página correta de acordo com o setor
+    if ($_SESSION['user_setor'] === 'ADMIN') {
+        header("Location: admin_dashboard.php");
+    } else if ($_SESSION['user_setor'] === 'COLABORADOR') {
+        header("Location: colaborador_dashboard.php");
+    }
     exit();
 } else {
     echo "<p style='color:red;'>Usuário ou senha inválidos.</p>";
     echo "<a href='index.html'>Voltar ao formulário</a>";
 }
 
-// Fechar a conexão
-$stmt->close();
-$con->close();
 ?>
